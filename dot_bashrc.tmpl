@@ -1,0 +1,7 @@
+if [[ -f $HOME/.aliases ]]; then
+	. $HOME/.aliases
+fi
+
+{{ template "nvm_setup" . }}
+
+eval "$(starship init bash)"
