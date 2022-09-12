@@ -11,4 +11,6 @@ export NVM_DIR="$HOME/.nvm"
 {{- if (index . "default_node") }}
 nvm install {{ .default_node }}
 nvm alias default {{ .default_node -}}
+{{ else }}
+nvm install --lts
 {{ end }}
