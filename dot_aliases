@@ -3,5 +3,11 @@ alias ts='npx tsc'
 alias fjs='npx prettier --write $(git diff --name-only)'
 alias fmd='npx prettier --write --prose-wrap=always --print-width=100 $(git diff --name-only)'
 alias dkill='docker kill $(docker ps -q)'
-alias postgres='docker run -p 5342:5432 postgres -e POSTGRES_HOST_AUTH_METHOD=trust'
+alias dclean='docker container prune -f && docker network prune -f'
+alias postgres='docker run -e POSTGRES_HOST_AUTH_METHOD=trust -p 5432:5432 postgres'
 alias dr='docker run'
+alias jfmt='./gradlew spotlessApply'
+alias gitroot='git rev-parse --show-toplevel'
+alias qpsql='PGPASSWORD=quarkus psql -h localhost -d quarkus -U quarkus'
+
+
