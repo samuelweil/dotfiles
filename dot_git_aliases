@@ -7,7 +7,8 @@
 	slog = log -n 5 --oneline
 	st = status
     	amend = commit --amend
-    	qam = commit --amend --no-edit
+    	fix = commit --fixup HEAD
+        qam = commit --amend --no-edit
     	track = "! f() { git checkout --track origin/$1; }; f"
 	sha = rev-parse HEAD
 	ssha = rev-parse --short HEAD
@@ -17,3 +18,6 @@
 	main = "! git fetch && git checkout origin/main"
 	rb = rebase
 	fp = fetch --prune --no-tags
+	orphan = "! git br -vv | grep 'origin/.*: gone' | tr -s ' ' | cut -d ' ' -f 2"
+	pushf = push --force-with-lease
+        prep = rebase -i --autosquash origin/main
