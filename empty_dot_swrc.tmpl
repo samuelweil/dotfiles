@@ -1,0 +1,10 @@
+load_if_exists() {
+	if [[ -f $1 ]]; then
+		. $1
+	fi
+}
+
+load_if_exists "$HOME/.aliases"
+load_if_exists "$HOME/.tokens"
+
+eval "$(starship init {{ .defaultShell -}})"
