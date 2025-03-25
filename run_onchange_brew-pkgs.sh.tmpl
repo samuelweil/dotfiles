@@ -1,0 +1,7 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/sh
+
+# Include brewfile hash to re-run this script whenever the brewfile changes
+# brewfile hash: {{ include "Brewfile.tmpl" | sha256sum }}
+brew bundle --file "$HOME/Brewfile"
+{{end}}
