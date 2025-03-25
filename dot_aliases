@@ -10,4 +10,5 @@ alias jfmt='./gradlew spotlessApply'
 alias gitroot='git rev-parse --show-toplevel'
 alias qpsql='PGPASSWORD=quarkus psql -h localhost -d quarkus -U quarkus'
 alias lg=lazygit
+alias zj=zellij
 
