@@ -1,5 +1,9 @@
 printf "Loading sw custom shell setup"
 
+{{- if eq .defaultShell "zsh" }}
+autoload -Uz compinit && compinit;
+{{ end -}}
+
 load_if_exists() {
 	if [[ -f $1 ]]; then
 		. $1
