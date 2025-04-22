@@ -1,3 +1,4 @@
+{{- if eq .chezmoi.os "darwin" -}}
 brew "lazygit"
 brew "zellij"
 brew "coreutils"
@@ -5,3 +6,4 @@ brew "findutils"
 brew "grep"
 brew "git-delta"
 brew "vim"
+{{ end -}}
