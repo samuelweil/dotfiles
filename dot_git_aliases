@@ -22,5 +22,5 @@
 	fp = fetch --prune --no-tags
 	orphan = "! git br -vv | grep 'origin/.*: gone' | tr -s ' ' | cut -d ' ' -f 2"
 	pushf = push --force-with-lease
-        prep = rebase -i --autosquash origin/main
+        prep = rebase -i --autosquash origin/HEAD
 	rba = rebase -i --autosquash
