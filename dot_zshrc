@@ -3,7 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 export NVM_COMPLETION=true
 export NVM_LAZY_LOAD=true
-export NVM_LAZY_LOAD_EXTRA_COMMANDS=('code')
+export NVM_LAZY_LOAD_EXTRA_COMMANDS=('code' 'make')
 
 plugins=(git zsh-nvm)
 
