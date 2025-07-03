@@ -1,7 +1,7 @@
 alias dc='docker compose'
 alias ts='npx tsc'
 alias fjs='npx prettier --write $(git diff --name-only)'
-alias fmd='npx prettier --write --prose-wrap=always --print-width=100 $(git diff --name-only)'
+alias fmd='npx prettier --write --prose-wrap=always --print-width=100'
 alias dkill='docker kill $(docker ps -q)'
 alias dclean='docker container prune -f && docker network prune -f'
 alias postgres='docker run -e POSTGRES_HOST_AUTH_METHOD=trust -p 5432:5432 postgres'
