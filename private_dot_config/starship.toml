@@ -1,5 +1,7 @@
 command_timeout=1000
 
+right_format="$time"
+
 [character]
 success_symbol = "[>](bold green)"
 error_symbol = "[x](bold red)"
@@ -9,5 +11,8 @@ disabled=true
 
 [package]
 disabled=true
+
+[time]
+disabled=false
 
 
