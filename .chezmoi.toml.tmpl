@@ -1,0 +1,7 @@
+[data]
+{{- if eq .chezmoi.os "darwin" }}
+	defaultShell = "zsh"
+{{ else }}
+	defaultShell = "bash"
+{{ end -}}
+
