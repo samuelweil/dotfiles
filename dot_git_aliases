@@ -1,0 +1,19 @@
+[alias]
+	ct = commit
+	co = checkout
+	cp = cherry-pick
+	br = branch
+	last = log -n 5 --decorate  --format='%h %<(15,trunc)%an %s'
+	slog = log -n 5 --oneline
+	st = status
+    amend = commit --amend
+    qam = commit --amend --no-edit
+    track = "! f() { git checkout --track origin/$1; }; f"
+	sha = rev-parse HEAD
+	ssha = rev-parse --short HEAD
+	latest = "! for branch in `git branch -r | grep -v HEAD`;do echo `git show --format=\"%ci %cr\" $branch | head -n 1` \t$branch; done | sort"
+	staged = diff --name-only --cached
+	graph = log -n 10 --oneline --graph
+	main = "! git fetch && git checkout origin/main"
+	rb = rebase
+	fp = fetch --prune
