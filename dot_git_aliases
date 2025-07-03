@@ -24,3 +24,4 @@
 	pushf = push --force-with-lease
         prep = rebase -i --autosquash origin/HEAD
 	rba = rebase -i --autosquash
+	spc = sparse-checkout
