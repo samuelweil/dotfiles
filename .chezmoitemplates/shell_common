@@ -7,7 +7,7 @@ load_if_exists() {
 
 load_if_exists "$HOME/.aliases"
 load_if_exists "$HOME/.tokens"
-load_if_exists "$HOME/.local"
+load_if_exists "$HOME/.localrc"
 {{ template "nvm_setup" . }}
 
 export PATH="$PATH:$HOME/.bin"
