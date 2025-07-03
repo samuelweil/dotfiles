@@ -1,4 +1,6 @@
 alias dc='docker compose'
+alias pc='podman compose'
+alias pd='podman'
 alias ts='npx tsc'
 alias fjs='npx prettier --write $(git diff --name-only)'
 alias fmd='npx prettier --write --prose-wrap=always --print-width=100'
