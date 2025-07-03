@@ -1,7 +1,13 @@
 # Path to your oh-my-zsh installation.
-if [[ -f $HOME/.aliases ]]; then
-	. $HOME/.aliases
-fi
+
+load_if() {
+	if [[ -f $1 ]]; then
+		. $1
+	fi
+}
+
+load_if "$HOME/.aliases"
+load_if "$HOME/.tokens"
 
 {{ template "nvm_setup" . }}
 
