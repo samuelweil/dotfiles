@@ -9,10 +9,9 @@ plugins=(git zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
-alias dc='docker compose'
-alias ts='npx tsc'
-alias fjs='npx prettier --write $(git diff --name-only)'
-alias fmd='npx prettier --write --prose-wrap=always --print-width=100 $(git diff --name-only)'
+if [[ -f $HOME/.aliases ]]; then
+	. $HOME/.aliases
+fi
 
 export PATH="$PATH:$HOME/.bin"
 
