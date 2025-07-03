@@ -1,0 +1,15 @@
+#!/bin/sh
+
+{{- if eq .defaultShell "zsh" }}
+rcfile="$HOME/.zshrc"
+{{ else if eq .defaultShell "bash" }}
+rcfile="$HOME/.bashrc"
+{{ end -}}
+
+if [[ ! -f "$rcfile" ]]; then
+	touch "$rcfile"
+fi
+
+grep '. $HOME/.swrc' "$rcfile" || printf "\n. \"$HOME/.swrc\"\n" >> "$rcfile" 
+
+
