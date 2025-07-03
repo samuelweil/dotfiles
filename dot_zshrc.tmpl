@@ -1,15 +1,3 @@
-# Path to your oh-my-zsh installation.
+{{ template "shell_common" . }}
 
-load_if() {
-	if [[ -f $1 ]]; then
-		. $1
-	fi
-}
-
-load_if "$HOME/.aliases"
-load_if "$HOME/.tokens"
-
-{{ template "nvm_setup" . }}
-
-export PATH="$PATH:$HOME/.bin"
 eval "$(starship init zsh)"
