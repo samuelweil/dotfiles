@@ -1,6 +1,7 @@
 [alias]
 	ct = commit
 	cm = commit -m
+	fx = commit --fixup
 	co = checkout
 	cp = cherry-pick
 	br = branch
