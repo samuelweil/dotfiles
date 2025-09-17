@@ -16,7 +16,7 @@
 	ssha = rev-parse --short HEAD
 	latest = "! for branch in `git branch -r | grep -v HEAD`;do echo `git show --format=\"%ci %cr\" $branch | head -n 1` \t$branch; done | sort"
 	staged = diff --name-only --cached
-	graph = log -n 10 --oneline --graph
+	graph = log --oneline --graph
 	main = "! git fetch && git checkout origin/main"
 	rb = rebase
 	fp = fetch --prune --no-tags
