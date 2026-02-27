@@ -1,4 +1,5 @@
 [alias]
+	cb = branch --show-current
 	ct = commit
 	cm = commit -m
 	fx = commit --fixup
@@ -25,3 +26,4 @@
         prep = rebase -i --autosquash origin/HEAD
 	rba = rebase -i --autosquash
 	spc = sparse-checkout
+	wt = worktree
