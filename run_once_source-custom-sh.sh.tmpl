@@ -4,12 +4,12 @@
 rcfile="$HOME/.zshrc"
 {{ else if eq .defaultShell "bash" }}
 rcfile="$HOME/.bashrc"
-{{ end -}}
+{{- end }}
 
-if [[ ! -f "$rcfile" ]]; then
-	touch "$rcfile"
+# Ensure the rcfile exists
+[ ! -f "$rcfile" ] && touch "$rcfile"
+
+# Append sourcing line only if it's missing
+if ! grep -qF ". \"$HOME/.swrc\"" "$rcfile"; then
+    printf "\n. \"$HOME/.swrc\"\n" >> "$rcfile"
 fi
-
-grep '. $HOME/.swrc' "$rcfile" || printf "\n. \"$HOME/.swrc\"\n" >> "$rcfile" 
-
-
