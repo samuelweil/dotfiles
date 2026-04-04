@@ -1,3 +1,4 @@
+sourceDir = {{ .chezmoi.sourceDir | quote }}
 [data]
 {{- if eq .chezmoi.os "darwin" }}
 	defaultShell = "zsh"
