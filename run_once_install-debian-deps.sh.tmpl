@@ -1,0 +1,10 @@
+{{- if and (eq .chezmoi.os "linux") (or (eq .chezmoi.osRelease.id "ubuntu") (eq .chezmoi.osRelease.id "debian")) -}}
+#!/bin/bash
+
+sudo apt-get update
+sudo apt-get install -y \
+	git-delta \
+	lazygit \
+	vim
+{{ end -}}
+	
