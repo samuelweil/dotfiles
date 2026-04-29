@@ -7,7 +7,7 @@
 	cp = cherry-pick
 	br = branch
 	last = log -n 5 --decorate  --format='%h %<(15,trunc)%an %s'
-	slog = log -n 5 --oneline
+	gr = log --decorate --oneline --graph	
 	st = status
     	amend = commit --amend
     	fix = commit --fixup HEAD
