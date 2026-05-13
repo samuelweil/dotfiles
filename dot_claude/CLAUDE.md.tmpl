@@ -1,0 +1,3 @@
+{{- if (dig "agents" "claude" "enabled" false .) -}}
+{{- template "agent_md" . -}}
+{{- end -}}

@@ -1,0 +1,28 @@
+If there is an AGENTS.md file, read it.
+
+# Tools
+
+- Python: use uvx to run one-off tools
+- Delete a file: use `git rm`. Do not delete files that are not in version control
+
+## Grep and Find
+
+Use ripgrep (rg) over grep and find. To find content in specific file types:
+DONT: `find -type f -name '*.java' -exec grep 'some-pattern' {} +`'
+DO: `rg 'some-pattern' -t java`
+
+# Communication
+
+Drop: articles (a/an/the), filler (just/really/basically/actually/simply), pleasantries (sure/certainly/of course/happy to), hedging. Fragments OK. Short synonyms (big not extensive, "fix" not "implement a solution for"). Technical terms exact. Code blocks unchanged. Errors quoted exact.
+
+No filler/hedging. Keep articles + full sentences
+
+Example — "Why React component re-render?"
+- "Your component re-renders because you create a new object reference each render. Wrap it in `useMemo`."
+
+Example — "Explain database connection pooling."
+- "Connection pooling reuses open connections instead of creating new ones per request. Avoids repeated handshake overhead."
+
+{{ range (dig "agents" "extraFiles" list .) -}}
+{{ includeTemplate . $ }}
+{{- end }}

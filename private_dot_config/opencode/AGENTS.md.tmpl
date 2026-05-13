@@ -1,0 +1,7 @@
+{{- if (dig "agents" "opencode" "enabled" false .) -}}
+# Skills
+
+When you encounter !`<some-text`> in a SKILL.md file, this is a Claude code directive. Run the command and include the output in the context
+
+{{- template "agent_md" . -}}
+{{- end -}}
