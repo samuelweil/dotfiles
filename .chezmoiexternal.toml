@@ -1,0 +1,10 @@
+[".config/opencode/skills"]
+	type = "archive"
+	url = "https://github.com/mattpocock/skills/archive/main.tar.gz"
+	exact = false
+	include = [
+		"skills-main/skills/engineering/tdd/*",
+		"skills-main/skills/productivity/grill-me/*",
+		"skills-main/skills/productivity/handoff/*"
+	]
+	stripComponents=3
