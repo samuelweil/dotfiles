@@ -1,4 +1,4 @@
-[".config/opencode/skills"]
+[pocock]
 	type = "archive"
 	url = "https://github.com/mattpocock/skills/archive/main.tar.gz"
 	exact = false
@@ -8,3 +8,13 @@
 		"skills-main/skills/productivity/handoff/*"
 	]
 	stripComponents=3
+	targetPath = ".config/opencode/skills"
+[superpowers]
+	type = "archive"
+	url = "https://github.com/obra/superpowers/archive/main.tar.gz"
+	exact = false
+	include = [
+		"superpowers-main/skills/subagent-driven-development/*"
+	]
+	targetPath = ".config/opencode/skills"
+	stripComponents=2
