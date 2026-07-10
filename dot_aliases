@@ -6,8 +6,11 @@ alias fjs='npx prettier --write $(git diff --name-only)'
 alias fmd='npx prettier --write --prose-wrap=always --print-width=100'
 alias postgres='docker run -e POSTGRES_HOST_AUTH_METHOD=trust -p 5432:5432 postgres'
 alias dr='docker run'
-alias jfmt='./gradlew spotlessApply || mvn spotless:apply'
+alias jfmt='./gradlew spotlessApply 2>/dev/null || mvn spotless:apply'
 alias gitroot='git rev-parse --show-toplevel'
 alias lg=lazygit
 alias zj=zellij
+
+alias ll='ls -l'
+alias la='ls -la'
 
