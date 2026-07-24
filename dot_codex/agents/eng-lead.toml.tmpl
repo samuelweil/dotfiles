@@ -1,0 +1,14 @@
+{{- if (dig "agents" "codex" "enabled" false .) -}}
+name = "eng_lead"
+description = "Engineering lead to orchestrate development"
+model = "{{ (dig "agents" "codex" "models" "plan" "gpt-5.6" .) }}"
+model_reasoning_effort = "high"
+sandbox_mode = "workspace-write"
+developer_instructions = """
+{{ template "agents/eng-lead.md" . }}
+"""
+
+[[skills.config]]
+path = "{{ .chezmoi.homeDir }}/.agents/skills/grill-with-docs/SKILL.md"
+enabled = true
+{{ end -}}
