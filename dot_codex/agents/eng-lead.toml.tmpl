@@ -1,4 +1,3 @@
-{{- if (dig "agents" "codex" "enabled" false .) -}}
 name = "eng_lead"
 description = "Engineering lead to orchestrate development"
 model = "{{ (dig "agents" "codex" "models" "plan" "gpt-5.6" .) }}"
@@ -11,4 +10,3 @@ developer_instructions = """
 [[skills.config]]
 path = "{{ .chezmoi.homeDir }}/.agents/skills/grill-with-docs/SKILL.md"
 enabled = true
-{{ end -}}

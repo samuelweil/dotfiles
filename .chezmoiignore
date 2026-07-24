@@ -1,2 +1,10 @@
 install.sh
 *.md
+
+{{ if not (dig "agents" "claude" "enabled" false .) -}}
+{{ .chezmoi.homeDir }}/.claude
+{{- end -}}
+
+{{ if not (dig "agents" "codex" "enabled" false .) -}}
+{{ .chezmoi.homeDir }}/.codex
+{{- end -}}
