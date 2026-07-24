@@ -1,20 +1,34 @@
-[pocock]
+{{- if (dig "agents" "skills" "pocock" "enabled" true .) -}}
+[pocock-tdd]
 	type = "archive"
 	url = "https://github.com/mattpocock/skills/archive/main.tar.gz"
-	exact = false
-	include = [
-		"skills-main/skills/engineering/tdd/*",
-		"skills-main/skills/productivity/grill-me/*",
-		"skills-main/skills/productivity/handoff/*"
-	]
-	stripComponents=3
-	targetPath = ".config/opencode/skills"
+	exact = true
+	include = ["skills-main/skills/engineering/tdd/**"]
+	stripComponents = 4
+	targetPath = ".config/ai-skills/tdd"
+
+[pocock-grill]
+	type = "archive"
+	url = "https://github.com/mattpocock/skills/archive/main.tar.gz"
+	exact = true
+	include = ["skills-main/skills/productivity/grill-me/**"]
+	stripComponents = 4
+	targetPath = ".config/ai-skills/grill-me"
+
+[pocock-handoff]
+	type = "archive"
+	url = "https://github.com/mattpocock/skills/archive/main.tar.gz"
+	exact = true
+	include = ["skills-main/skills/productivity/handoff/**"]
+	stripComponents = 4
+	targetPath = ".config/ai-skills/handoff"
+{{ end -}}
+{{- if (dig "agents" "skills" "superpowers" "enabled" true .) -}}
 [superpowers]
 	type = "archive"
 	url = "https://github.com/obra/superpowers/archive/main.tar.gz"
-	exact = false
-	include = [
-		"superpowers-main/skills/subagent-driven-development/*"
-	]
-	targetPath = ".config/opencode/skills"
-	stripComponents=2
+	exact = true
+	include = ["superpowers-main/skills/subagent-driven-development/**"]
+	targetPath = ".config/ai-skills/subagent-driven-development"
+	stripComponents = 3
+{{ end -}}
