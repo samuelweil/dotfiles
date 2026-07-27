@@ -6,3 +6,17 @@ sourceDir = {{ .chezmoi.sourceDir | quote }}
 	defaultShell = "bash"
 {{ end -}}
 
+[data.agents.claude]
+	enabled = false
+	models = {
+		plan = "opus",
+		execute = "sonnet",
+		fast = "haiku"
+	}
+[data.agents.codex]
+	enabled = false
+	models = {
+		plan = "gpt-5.6-sol",
+		execute = "gpt-5.6-terra",
+		fast = "gpt-5.6-luna"
+	}
