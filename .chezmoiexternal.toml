@@ -1,4 +1,4 @@
-{{- if (dig "agents" "skills" "pocock" "enabled" true .) -}}
+{{- if (dig "agents" "skills" "pocock" "enabled" false .) -}}
 [pocock-tdd]
 	type = "archive"
 	url = "https://github.com/mattpocock/skills/archive/main.tar.gz"
@@ -22,8 +22,33 @@
 	include = ["skills-main/skills/productivity/handoff/**"]
 	stripComponents = 4
 	targetPath = ".config/ai-skills/handoff"
+
+[pocock-grilling]
+	type = "archive"
+	url = "https://github.com/mattpocock/skills/archive/main.tar.gz"
+	exact = true
+	include = ["skills-main/skills/productivity/grilling/**"]
+	stripComponents = 4
+	targetPath = ".config/ai-skills/grilling"
+
+[pocock-grill-docs]
+	type = "archive"
+	url = "https://github.com/mattpocock/skills/archive/main.tar.gz"
+	exact = true
+	include = ["skills-main/skills/engineering/grill-with-docs/**"]
+	stripComponents = 4
+	targetPath = ".config/ai-skills/grill-with-docs"
+
+[pocock-domain-modeling]
+	type = "archive"
+	url = "https://github.com/mattpocock/skills/archive/main.tar.gz"
+	exact = true
+	include = ["skills-main/skills/engineering/domain-modeling/**"]
+	stripComponents = 4
+	targetPath = ".config/ai-skills/domain-modeling"
+
 {{ end -}}
-{{- if (dig "agents" "skills" "superpowers" "enabled" true .) -}}
+{{- if (dig "agents" "skills" "superpowers" "enabled" false .) -}}
 [superpowers]
 	type = "archive"
 	url = "https://github.com/obra/superpowers/archive/main.tar.gz"
