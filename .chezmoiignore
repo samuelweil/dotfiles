@@ -1,5 +1,6 @@
 install.sh
 *.md
+skills/
 
 {{ if not (dig "agents" "claude" "enabled" false .) -}}
 {{ .chezmoi.homeDir }}/.claude
