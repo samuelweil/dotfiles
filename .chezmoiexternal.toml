@@ -1,13 +1,5 @@
 {{ $skillsDir := .agents.skills.dir }}
 {{- if (dig "agents" "skills" "pocock" "enabled" false .) -}}
-[pocock-tdd]
-	type = "archive"
-	url = "https://github.com/mattpocock/skills/archive/main.tar.gz"
-	exact = true
-	include = ["skills-main/skills/engineering/tdd/**"]
-	stripComponents = 4
-	targetPath = "{{$skillsDir}}/tdd"
-
 [pocock-grill]
 	type = "archive"
 	url = "https://github.com/mattpocock/skills/archive/main.tar.gz"
@@ -47,14 +39,6 @@
 	include = ["skills-main/skills/engineering/domain-modeling/**"]
 	stripComponents = 4
 	targetPath = "{{$skillsDir}}/domain-modeling"
-
-[pocock-implement]
-	type = "archive"
-	url = "https://github.com/mattpocock/skills/archive/main.tar.gz"
-	exact = true
-	include = ["skills-main/skills/engineering/implement/**"]
-	stripComponents = 4
-	targetPath = "{{$skillsDir}}/implement"
 
 {{ end -}}
 {{- if (dig "agents" "skills" "superpowers" "enabled" false .) -}}
