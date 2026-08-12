@@ -3,9 +3,9 @@ install.sh
 skills/
 
 {{ if not (dig "agents" "claude" "enabled" false .) -}}
-{{ .chezmoi.homeDir }}/.claude
-{{- end -}}
+.claude
+{{- end }}
 
 {{ if not (dig "agents" "codex" "enabled" false .) -}}
-{{ .chezmoi.homeDir }}/.codex
-{{- end -}}
+.codex
+{{- end }}

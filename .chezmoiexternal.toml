@@ -1,3 +1,4 @@
+{{ $skillsDir := .agents.skills.dir }}
 {{- if (dig "agents" "skills" "pocock" "enabled" false .) -}}
 [pocock-tdd]
 	type = "archive"
@@ -5,7 +6,7 @@
 	exact = true
 	include = ["skills-main/skills/engineering/tdd/**"]
 	stripComponents = 4
-	targetPath = ".config/ai-skills/tdd"
+	targetPath = "{{$skillsDir}}/tdd"
 
 [pocock-grill]
 	type = "archive"
@@ -13,7 +14,7 @@
 	exact = true
 	include = ["skills-main/skills/productivity/grill-me/**"]
 	stripComponents = 4
-	targetPath = ".config/ai-skills/grill-me"
+	targetPath = "{{$skillsDir}}/grill-me"
 
 [pocock-handoff]
 	type = "archive"
@@ -21,7 +22,7 @@
 	exact = true
 	include = ["skills-main/skills/productivity/handoff/**"]
 	stripComponents = 4
-	targetPath = ".config/ai-skills/handoff"
+	targetPath = "{{$skillsDir}}/handoff"
 
 [pocock-grilling]
 	type = "archive"
@@ -29,7 +30,7 @@
 	exact = true
 	include = ["skills-main/skills/productivity/grilling/**"]
 	stripComponents = 4
-	targetPath = ".config/ai-skills/grilling"
+	targetPath = "{{$skillsDir}}/grilling"
 
 [pocock-grill-docs]
 	type = "archive"
@@ -37,7 +38,7 @@
 	exact = true
 	include = ["skills-main/skills/engineering/grill-with-docs/**"]
 	stripComponents = 4
-	targetPath = ".config/ai-skills/grill-with-docs"
+	targetPath = "{{$skillsDir}}/grill-with-docs"
 
 [pocock-domain-modeling]
 	type = "archive"
@@ -45,7 +46,15 @@
 	exact = true
 	include = ["skills-main/skills/engineering/domain-modeling/**"]
 	stripComponents = 4
-	targetPath = ".config/ai-skills/domain-modeling"
+	targetPath = "{{$skillsDir}}/domain-modeling"
+
+[pocock-implement]
+	type = "archive"
+	url = "https://github.com/mattpocock/skills/archive/main.tar.gz"
+	exact = true
+	include = ["skills-main/skills/engineering/implement/**"]
+	stripComponents = 4
+	targetPath = "{{$skillsDir}}/implement"
 
 {{ end -}}
 {{- if (dig "agents" "skills" "superpowers" "enabled" false .) -}}
@@ -54,6 +63,6 @@
 	url = "https://github.com/obra/superpowers/archive/main.tar.gz"
 	exact = true
 	include = ["superpowers-main/skills/subagent-driven-development/**"]
-	targetPath = ".config/ai-skills/subagent-driven-development"
+	targetPath = "{{$skillsDir}}/subagent-driven-development"
 	stripComponents = 3
 {{ end -}}

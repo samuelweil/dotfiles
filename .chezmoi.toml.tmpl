@@ -4,7 +4,7 @@ sourceDir = {{ .chezmoi.sourceDir | quote }}
 	defaultShell = "zsh"
 {{ else }}
 	defaultShell = "bash"
-{{ end -}}
+{{ end }}
 
 [data.agents.claude]
 	enabled = false
@@ -20,3 +20,7 @@ sourceDir = {{ .chezmoi.sourceDir | quote }}
 		execute = "gpt-5.6-terra",
 		fast = "gpt-5.6-luna"
 	}
+
+[data.agents.skills]
+	dir = ".agents/skills"
+	pocock.enabled = true
