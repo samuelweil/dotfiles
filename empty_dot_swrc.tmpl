@@ -11,6 +11,7 @@ load_if_exists() {
 }
 
 load_if_exists "$HOME/.aliases"
+load_if_exists "$HOME/.aliases.local"
 load_if_exists "$HOME/.tokens"
 
 [ "$STARSHIP_DISABLE" = "true" ] || eval "$(starship init {{ .defaultShell -}})"
