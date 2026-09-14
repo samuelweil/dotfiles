@@ -31,9 +31,7 @@ Example — "Why React component re-render?"
 Example — "Explain database connection pooling."
 - "Connection pooling reuses open connections instead of creating new ones per request. Avoids repeated handshake overhead."
 
-# Plan
-When creating planning documents such as PRDs, ERDs, checklists, or task-lists, use the docs/plans directory for the project.
+{{- range (dig "agents" "extraFiles" list .) }}
 
-{{- range (dig "agents" "extraFiles" list .) -}}
 {{ includeTemplate . $ }}
 {{- end -}}
