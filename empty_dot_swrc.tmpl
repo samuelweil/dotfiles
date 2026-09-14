@@ -14,4 +14,6 @@ load_if_exists "$HOME/.aliases"
 load_if_exists "$HOME/.aliases.local"
 load_if_exists "$HOME/.tokens"
 
+source <(chezmoi completion {{ .defaultShell }})
+
 [ "$STARSHIP_DISABLE" = "true" ] || eval "$(starship init {{ .defaultShell -}})"
