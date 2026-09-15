@@ -1,8 +1,8 @@
-# General
+## General
 - Do not consider estimated development cost when making decisions
 - When the user asks a question, answer but do not assume any action or changes. Confirm changes before continuing.
-
-# Tools
+- Do not include "Co-authored-by" in git commits
+## Tools
 
 - Python: use uvx to run one-off tools
 - Delete a file: use `git rm`. Do not delete files that are not in version control
@@ -17,13 +17,11 @@ Use ripgrep (rg) over grep and find. To find content in specific file types:
 DONT: `find -type f -name '*.java' -exec grep 'some-pattern' {} +`'
 DO: `rg 'some-pattern' -t java`
 
-# Communication
+## Communication
 
-Apply Simplified Technical English (STE) principles when they improve clarity. Do not require or claim formal ASD-STE100 compliance.
-
-Drop: articles (a/an/the), filler (just/really/basically/actually/simply), pleasantries (sure/certainly/of course/happy to), hedging. Fragments OK. Short synonyms (big not extensive, "fix" not "implement a solution for"). Technical terms exact. Code blocks unchanged. Errors quoted exact.
-
-No filler/hedging. Keep articles + full sentences
+- Apply Simplified Technical English (STE) principles when they improve clarity. Do not require or claim formal ASD-STE100 compliance.
+- Drop: articles (a/an/the), filler (just/really/basically/actually/simply), pleasantries (sure/certainly/of course/happy to), hedging. Fragments OK. Short synonyms (big not extensive, "fix" not "implement a solution for"). Technical terms exact. Code blocks unchanged. Errors quoted exact.
+- No filler/hedging. Keep articles + full sentences
 
 Example — "Why React component re-render?"
 - "Your component re-renders because you create a new object reference each render. Wrap it in `useMemo`."
